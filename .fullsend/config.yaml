@@ -12,6 +12,9 @@ roles:
     - fix
     - retro
     - prioritize
+agents:
+    - name: local-base
+      source: harness/local-base.yaml
 allowed_remote_resources:
     - https://raw.githubusercontent.com/fullsend-ai/fullsend/
     - https://raw.githubusercontent.com/fullsend-ai/agents/
