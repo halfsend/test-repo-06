@@ -1,0 +1,6 @@
+base: local-base.yaml
+slug: fullsend-ai-local-child
+trigger: |
+  event.entity.kind == "work_item"
+  && event.transition.kind == "label_changed"
+  && event.transition.label.name == "ready-for-base-test"
