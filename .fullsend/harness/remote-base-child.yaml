@@ -1,0 +1,6 @@
+base: https://raw.githubusercontent.com/halfsend/test-repo-06-base-harness-host/main/harness/remote-base.yaml#sha256=42f1a91a30c954aef3cd751b0aa7d8ddde53e9862c0113a9376bfc81152e1668
+slug: fullsend-ai-remote-base-child
+trigger: |
+  event.entity.kind == "work_item"
+  && event.transition.kind == "label_changed"
+  && event.transition.label.name == "ready-for-base-test"
