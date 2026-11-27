@@ -1,0 +1,10 @@
+ops:
+    - description: Prove execution
+      op: write_fixture
+      args: output/dispatch-ok.json, fixtures/dispatch/ok.json
+      content: |
+        {"status":"ok","source":"harness-dispatch-behaviour-test"}
+    - description: Read the traces headers
+      op: assert_env
+      args: OTEL_EXPORTER_OTLP_TRACES_HEADERS
+      expect_fail: true
